@@ -58,11 +58,15 @@
 	attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル・陰影起伏図</a>"
 	});
 
+	var map6 = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png', {
+	maxZoom: 16,
+	attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル・治水地形分類図 更新版（2007年以降）</a>"
+	});
 
 
 		var map = L.map('map', {
 			center: [41.006136,140.384045],
-			zoom: 13,
+			zoom: 14,
 			layers: [map2],
 			zoomControl: false
 		});
@@ -73,7 +77,8 @@
 			"最新空中写真": map2,
 			"1974年～1978年の空中写真":map3,
 			"1960年代の空中写真":map4,
-			"陰影起伏図":map5
+			"陰影起伏図":map5,
+			"治水地形分類図 更新版（2007年以降）":map6
 		};
 
 		L.control.layers(baseLayers).addTo(map);
